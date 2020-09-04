@@ -1,0 +1,89 @@
+1.install the bootstrap
+2. download fontawesome
+copy all.css and webfonts folder from fontawesome and paste it into the public folder
+3. open index.html and link all.css
+<link rel="stylesheet" href="all.css">
+Create the components
+Create the routes
+install npm i react-router-dom
+in App.js, include 4 routing we need 4 packages --(Router,Route, Switch and Link)
+Router(BrowserRouter): forconnecting Browser URL
+Switch:Adding default page(page not found page)
+Link:Adding link to the components
+After inporting define Routes
+<Router>
+        <Switch>
+        <Route path="/" exact component={ProductList}></Route>
+        <Route path="/details" exact component={Details}></Route>
+        <Route path="/cart" exact component={Cart}></Route>
+        <Route component={Default}></Route>
+        </Switch>
+      </Router>
+
+7. Set up navigation bar inside Navbar.js
+8. inside navbar.js add the external image. to include a image, import it first using 
+import storeImage from '../sale (1).png';
+then use it as:
+<img src={storeImage} width="80px" height="80px"></img>
+9 . Make the storeImage a link to the hone page.
+to include Router in all child components, define router in inde.js,
+it means enclose App.js inside Router tag in indev.js
+ReactDOM.render(
+ <Router>
+    <App />
+  </Router>,
+  document.getElementById('root')
+);
+
+
+
+10. Complete the nav bar with a Product link and cart button.
+
+11. Design the cart button using style somponents
+Download styled-components using:
+npm i styled-components
+
+12. define buttonContainer style inside navbar.js
+
+13. Create one array allProducts inside data.js and one object detailProduct
+put all the info about data and images
+
+14. Create context.js inside src folder for sharing the data among components.
+Create context api, provider and consumer inside context.js
+
+15. write ProductProvider inside index.js (parent component)
+Write ProductConsumer inside ProductList.js(child component)
+
+16. write ProductConsumer inside ProductList.js
+Receive the data from context.js and call Product for each object(product)
+
+17. start working on Product.js
+
+18. Receive copy of original data from data.js using setProducts()
+function
+
+19. Start working on Details.js
+
+20. Update handle detail function. Fetch the date using id and send it ti detail page.
+
+21. update addCart function
+22. Creating model component
+
+23. source of the data is 
+context.js(provider)=>cartarray to Cart.js=>cartList.js=>cartitem.js
+
+24.
+npm install --save resolve-url-loader --dev    npm i --save-dev bootstrap@next bootstrap-loader tether jquery
+npm install popper.js --save
+
+1.  add import 'bootstrap/dist/js/bootstrap.min.js'; inside app.js
+2.  npm install popper.js --save
+3.  npm install --save resolve-url-loader --dev
+    npm i --save-dev bootstrap@next bootstrap-loader tether jquery
+
+
+
+
+
+
+8. index.js->app.js->navbar.js
